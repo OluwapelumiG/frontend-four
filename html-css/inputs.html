@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    body {
+      background: #f7f9fb;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .form-container {
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(34, 56, 93, 0.10), 0 1.5px 4px rgba(17, 34, 51, 0.07);
+      max-width: 430px;
+      width: 100%;
+    }
+    .form-title {
+      font-size: 1.6rem;
+      color: #1d3557;
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      letter-spacing: 1px;
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+    }
+    label {
+      font-weight: 500;
+      font-size: 1rem;
+      margin-bottom: .2rem;
+      color: #24394e;
+    }
+    label.required:after {
+      content: '*';
+      color: #e63946;
+      margin-left: 3px;
+      font-size: 1rem;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="tel"],
+    input[type="password"],
+    select {
+      border: 1px solid #dce3ea;
+      border-radius: 7px;
+      padding: .65rem 1rem;
+      font-size: 1rem;
+      background: #f6f8fb;
+      transition: border 0.2s;
+      outline: none;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="date"]:focus,
+    input[type="tel"]:focus,
+    input[type="password"]:focus,
+    select:focus {
+      border: 1.5px solid #457b9d;
+      background: #fff;
+    }
+    .gender-group, .subjects-group, .paid-group {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: .2rem;
+    }
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+      margin-top: .2rem;
+    }
+    .form-group input[type="file"] {
+      border: none;
+      padding-left: 0;
+      background: transparent;
+      font-size: 0.95rem;
+    }
+    .submit-btn {
+      width: 100%;
+      background: #457b9d;
+      color: #fff;
+      border: none;
+      border-radius: 7px;
+      padding: .9rem 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: .5px;
+      cursor: pointer;
+      box-shadow: 0 3px 16px rgba(69, 123, 157, 0.07);
+      margin-top: .5rem;
+      transition: background 0.21s;
+    }
+    .submit-btn:hover, .submit-btn:focus {
+      background: #265980;
+    }
+    @media (max-width: 500px) {
+      .form-container {
+        padding: 1.2rem;
+        border-radius: 9px;
+      }
+    }
+    ::placeholder {
+      color: #9faabb;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <form method="post" enctype="multipart/form-data" autocomplete="off">
+      <h2 class="form-title">Registration Form</h2>
+
+      <div class="form-group">
+        <label for="firstname" class="required">Firstname</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Enter your firstname" required>
+      </div>
+
+      <div class="form-group">
+        <label for="middlename">Middlename (optional)</label>
+        <input type="text" id="middlename" name="middlename" placeholder="Enter your middlename">
+      </div>
+
+      <div class="form-group">
+        <label for="lastname" class="required">Lastname</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Enter your lastname" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dob" class="required">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="required">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone" class="required">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="e.g. 08012345678" required pattern="[0-9]{11,}">
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="required">Password</label>
+        <input type="password" id="password" name="password" required minlength="6" autocomplete="new-password">
+      </div>
+
+      <div class="form-group">
+        <label for="confirm-password" class="required">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" required minlength="6" autocomplete="new-password">
+      </div>
+
+      <div class="form-group">
+        <label class="required">Gender</label>
+        <div class="gender-group">
+          <label><input type="radio" name="gender" value="Male" required> Male</label>
+          <label><input type="radio" name="gender" value="Female"> Female</label>
+          <label><input type="radio" name="gender" value="Other"> Other</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="passport" class="required">Passport Photograph</label>
+        <input type="file" id="passport" name="passport" accept="image/*" required>
+      </div>
+
+      <div class="form-group">
+        <label class="required">Have you paid?</label>
+        <div class="paid-group">
+          <label><input type="radio" name="paid" value="Yes" required> Yes</label>
+          <label><input type="radio" name="paid" value="No"> No</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="required">Subjects Offered</label>
+        <div class="checkbox-group subjects-group">
+          <label><input type="checkbox" name="subjects" value="English"> English</label>
+          <label><input type="checkbox" name="subjects" value="Mathematics"> Mathematics</label>
+          <label><input type="checkbox" name="subjects" value="Physics"> Physics</label>
+          <label><input type="checkbox" name="subjects" value="Chemistry"> Chemistry</label>
+          <label><input type="checkbox" name="subjects" value="Biology"> Biology</label>
+          <label><input type="checkbox" name="subjects" value="Commerce"> Commerce</label>
+          <label><input type="checkbox" name="subjects" value="Lit in English"> Lit. in English</label>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

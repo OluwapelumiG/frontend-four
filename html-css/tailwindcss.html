@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- 
+
+    sizes:
+    xs - extra small
+    sm - small
+    md - medium
+    lg - large
+    xl - extra large
+    (n)xl - n times extra large (2xl, 4xl, 7xl)
+
+
+    degree:
+    100-900
+
+    border-width:
+    border-color:
+    border-style:
+    border-radius: 
+
+    width:
+    max-width:
+
+
+    -->
+
+</head>
+<body>
+
+    <div class="mx-auto max-w-2xl mt-40">
+        <h1 class="text-4xl my-4">Login Form</h1>
+        <h5 class="text-xl my-4">Enter your login credentials</h5>
+        <div class="flex flex-col my-4">
+            <label class="text-xl" for="">Username</label>
+            <input class="text-lg border-1 border-green-500 rounded-lg px-4 py-2" type="text" placeholder="Enter username">
+        </div>
+
+        <div class="flex flex-col my-4">
+            <label class="text-xl" for="">Password</label>
+            <input class="text-lg border-1 border-green-500 rounded-lg px-4 py-2"  type="text" placeholder="Enter Password">
+        </div>
+
+        <button class="px-4 py-2 rounded-lg bg-green-500 hover:bg-green-900 hover:text-white">Login</button>
+
+    </div>
+    
+</body>
+</html>
