@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <p id="displayA">A = </p>
+        <p id="displayB">B = </p>
+        <p id="displayC">C = </p>
+    </div>
+    <span id="answerBox">Answer = </span>
+
+    <script>
+        // answer = b^2 -4ac
+
+        
+
+        
+
+        function displaySomething(element, text){
+            let element_to_display = document.getElementById(element);
+            element_to_display.innerHTML = text;
+        }
+
+        function doCalculation(a, b, c){
+            let answer1 = (b*b) -4 * a * c;
+            let answer2 = (b*b) +4 * a * c;
+
+            displaySomething('displayA', "A = " + a);
+            displaySomething('displayB', "B = " + b);
+            displaySomething('displayC', "C = " + c);
+
+            
+            displaySomething('answerBox', "Answers: X1=" + answer1 + ", X2=" + answer2);
+        }
+
+
+        doCalculation(10, 5, 7);
+
+        // let a = 4;
+        // let b = 2;
+        // let c = 7;
+
+        // let answer = (b*b) -4 * a * c;
+
+        // let a_display = document.getElementById('displayA');
+        // a_display.innerHTML = "A = " + a;
+        
+
+        // let b_display = document.getElementById('displayB');
+        // b_display.innerHTML = "B = " + b;
+
+        // let c_display = document.getElementById('displayC');
+        // c_display.innerHTML = "C = " + c;
+
+        // let answerBox = document.getElementById('answerBox');
+        // answerBox.innerHTML = "Answer =" + answer;
+
+        
+
+       
+
+    </script>
+    
+</body>
+</html>

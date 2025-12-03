@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+
+    <div class="flex flex-col p-10 max-w-4xl mx-auto m-10 bg-gray-100 gap-10">
+        <input id="nameInput" type="text" type="text" name="name" placeholder="Enter your name" class="border-1 border-gray-500 rounded-md px-4 py-2 w-full">
+        <button onclick="getName()" id="submitBtn" type="button" class="px-4 py-2 rounded-md bg-green-300 ">Submit</button>
+
+        <p id="nameDisplay" class="font-bold text-4xl"></p>
+    </div>
+
+    <script>
+        function displayName(name){
+            document.getElementById('nameDisplay').innerHTML = name;
+        }
+
+        function getName(){
+            let nameInput = document.getElementById('nameInput');
+
+            let name = nameInput.value;
+            displayName(name);
+        }
+    </script>
+    
+</body>
+</html>
