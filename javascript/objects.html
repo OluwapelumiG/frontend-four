@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <input id="name" type="text" placeholder="Name">
+        <input id="course" type="text" placeholder="Course">
+        <!-- <input id="email" type="text" placeholder="Email"> -->
+        <!-- <input id="phone" type="text" placeholder="Phone number"> -->
+        <button onclick="displayName()">Add</button>
+    </div>
+
+    <p id="paragraph"></p>
+
+
+    <table>
+        <thead>
+            <th>#</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Actions</th>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Ayomidola</td>
+                <td>Frontend</td>
+                <td>ay.com</td>
+                <td>098765432</td>
+                <td><button>Edit</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Emmanuel</td>
+                <td>Frontend</td>
+                <td>emma.com</td>
+                <td>3456687654</td>
+                <td><button>Edit</button></td>
+            </tr>
+        </tbody>
+        
+    </table>
+
+
+    <script>
+        
+        let classroom = [
+            {
+                name: "Muhammed",
+                course: "Frontend"
+            },
+            {
+                name: "Emmanuel",
+                course: "Backend"
+            },
+            {
+                name: "Ayomidola",
+                course: "Fullstack"
+            }
+        ]
+
+        console.log(students);
+
+        function displayName(){
+            let user = {
+                name: document.getElementById('name').value,
+                course: document.getElementById('course').value,
+                // email: document.getElementById('email').value,
+                // phone: document.getElementById('phone').value,
+            }
+
+            students.push(user);
+
+            console.log(students)
+        }
+
+
+        // let names = [
+        //     "Muhammed", 
+        //     "Emmanuel",
+        //     "Ayomidola",
+        //     "Promise"
+        // ];
+
+        // console.log(names);
+
+
+
+      
+
+    </script>
+    
+</body>
+</html>
