@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <input id="fatherInput" type="text" placeholder="Father's name">
+        <input id="motherInput" type="text" placeholder="Mother's name">
+        <button onclick="addFamily()">Add</button>
+    </div>
+
+    <script>
+        let courses = [
+            {
+                subject: "Math",
+                teacher: "Mariam"
+            },
+
+        ]
+
+
+
+        let communities = [
+            {
+                father: "John",
+                mother: "Percy"
+            },
+            {
+                father: "Mohammed",
+                mother: "Sarah"
+            }
+        ]
+
+        console.log("Base Community", communities);
+
+        function addFamily() {
+            let newFamily = {
+                father: document.getElementById('fatherInput').value,
+                mother: document.getElementById('motherInput').value
+            }
+
+            communities.push(newFamily);
+            console.log("Updated Community", communities);
+        }
+    </script>
+    
+</body>
+</html>
